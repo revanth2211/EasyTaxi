@@ -12,10 +12,9 @@ export default function Home() {
     const waitForGoogleMaps = () => {
       if (
         typeof window !== 'undefined' &&
-        window.google &&
-        window.google.maps &&
-        window.google.maps.places
+        (window as any).google?.maps?.places
       ) {
+      }
         const pickupInput = document.getElementById('pickup') as HTMLInputElement;
         const dropoffInput = document.getElementById('dropoff') as HTMLInputElement;
 
