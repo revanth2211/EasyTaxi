@@ -18,8 +18,8 @@ export default function Home() {
         const pickupInput = document.getElementById('pickup') as HTMLInputElement;
         const dropoffInput = document.getElementById('dropoff') as HTMLInputElement;
 
-        if (pickupInput) new window.google.maps.places.Autocomplete(pickupInput);
-        if (dropoffInput) new window.google.maps.places.Autocomplete(dropoffInput);
+        if (pickupInput) new (window as any).google.maps.places.Autocomplete(pickupInput);
+        if (dropoffInput) new (window as any).google.maps.places.Autocomplete(dropoffInput);
       } else {
         setTimeout(waitForGoogleMaps, 300);
       }
