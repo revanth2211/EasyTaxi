@@ -14,7 +14,6 @@ export default function Home() {
         typeof window !== 'undefined' &&
         (window as any).google?.maps?.places
       ) {
-      }
         const pickupInput = document.getElementById('pickup') as HTMLInputElement;
         const dropoffInput = document.getElementById('dropoff') as HTMLInputElement;
 
